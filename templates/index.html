@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title> alert application</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+  <style>
+ body {
+  background-image: url('/static/img/b2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+</head>
+  <body>
+    <header>
+        <div class="header_menu">
+
+            <div class="menu_list">
+                <ul>
+                    <li><a href="https://github.com/Kuldeep-Singh-Bithu/Automatic_Email_Alerts_System-.git">GITHUB</a> </li>
+                    <li><a href="https://github.com/Kuldeep-Singh-Bithu/Automatic_Email_Alerts_System-.git">About Me</a> </li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_content">
+            <h1>  Alert application </h1>
+            <h3> A price alert application that triggers an email when the user’s target price is achieved.</h3>
+
+            <h2>Enter Values</h2>
+
+            <form action="{{ url_for('predict')}}"method="post">
+        <input type="text" step="any" name="email" placeholder="Email" required="required" />
+        <input type="number" step="any" name="Target" placeholder="Target" required="required" />
+
+        <div class="b">
+<button type="submit" class="btn btn-primary btn-block btn-large"><h4>Submit</h4></button>
+</div>
+    </form>
+
+    <div>
+    <button id="myButton" class="float-left submit-button" ><h4>show records</h4></button>
+
+   <script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "/newspred";
+    };
+    </script>
+    </div>
+
+
+        </div>
+
+    </header>
+
+</body>
+</html>
